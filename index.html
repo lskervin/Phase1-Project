@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drinkologist</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./index.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Drinkology</h1>
+  </header>
+
+  <p> <ul id="drink-options">
+    <li>TEQUILA |</li>
+    <li>VODKA |</li>
+    <li>RUM |</li>
+    <li>WHISKEY |</li>
+    <li>CHAMPANGE |</li>
+    <li>WINE |</li>
+    <li>VODKA |</li>
+    <li>NON-ALCOHOLIC |</li>
+    <li>SURPRISE ME </li>
+  </ul></p>
+
+  <!-- <section id="drink-button">
+    <button id="toggle-drink">▶ Display Drink</button>
+  </section> -->
+
+  <div id="drink-grid-container">
+
+  </div>
+
+  <div id="letter-options-container">
+    <ul id="letter-options">
+      <li><button>#</button></li>
+      <li><button>A</button></li>
+      <li><button>B</button></li>
+      <li><button>C</button></li>
+      <li><button>D</button></li>
+      <li><button>E</button></li>
+      <li><button>F</button></li>
+      <li><button>G</button></li>
+      <li><button>H</button></li>
+      <li><button>I</button></li>
+      <li><button>J</button></li>
+      <li><button>K</button></li>
+      <li><button>L</button></li>
+      <li><button>M</button></li>
+      <li><button>N</button></li>
+      <li><button>O</button></li>
+      <li><button>P</button></li>
+      <li><button>Q</button></li>
+      <li><button>R</button></li>
+      <li><button>S</button></li>
+      <li><button>T</button></li>
+      <li><button>U</button></li>
+      <li><button>V</button></li>
+      <li><button>W</button></li>
+      <li><button>X</button></li>
+      <li><button>Y</button></li>
+      <li><button>Z</button></li>
+    </ul>
+    </div>
+
+  <div id="drink-display">
+  <section id="drink-detail">
+    <h2 class="name">Insert Name Here</h2>
+    <img class="detail-image" src="./image-placeholder.jpg" alt="Placeholder Image">
+    <div class="ingredients-and-instructions">
+        <h3>Instructions and Ingredients:</h3>
+        <input type="text" name="ingredients-and-instructions" id="ingredients-and-instructions" value="Display ingredients and instructions inside the box.">
+    </div>
+    
+  </section>
+
+</div>
+  
+  <section id="form-button">
+  <button id="toggle-form">▶ Add New Drink</button>
+</section>
+
+
+  <form id="new-drink">
+    <h4>Add New Drink:</h4>
+    <label for="drink-name">Drink Name:</label>
+    <input type="text" id="drink-name" name="drink-name" required>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category">
+    <label for="alcohol">Alcohol:</label>
+    <input type="text" id="alcohol" name="alcohol">
+    <label for="glass-type">Glass Type:</label>
+    <input type="text" id="glass-type" name="glass-type">
+    <label for="instructions">Instructions:</label>
+    <textarea id="instructions" name="instructions" rows="4"></textarea>
+    <input type="submit" id="submit-button" value="Submit">
+  </form>
+</body>
+</html>
