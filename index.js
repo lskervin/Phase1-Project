@@ -1,89 +1,65 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    fetch("https://rickandmortyapi.com/api/character/?page=1")
+function dataFetch() {
+    fetch('http://localhost:3000/drinks')
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        // duckImages(data);
+      .then((response) => { 
+        Array.from(response).forEach((drink)=> {
+        console.log(`${drink.strIngredient1}`);
+        console.log(`${drink.strIngredient2}`);
+        console.log(`${drink.strIngredient3}`);
+        console.log(`${drink.strIngredient4}`);
+        console.log(`${drink.strMeasure1}`);
+        console.log(`${drink.strMeasure2}`);
+        console.log(`${drink.strMeasure3}`);
+        console.log(`${drink.strMeasure4}`);
+        displayDrinks(drink);
+        // console.log(`{drink}++`)
       });
-  });
-  
-//   function duckImages(images) {
-//     const duckDisplayContainer = document.querySelector("#duck-nav");
-//     images.forEach((imageUrl) => {
-//       let img = document.createElement("img");
-//       img.src = imageUrl.img_url;
-//       duckDisplayContainer.append(img);
+});
+};
 
-//       img.addEventListener('click',() =>{
-//         let div = document.querySelector("#duck-display")
-//         let h2 = document.querySelector('h2')
-//         h2.textContent = imageUrl.name;
-//         let displayImage = div.querySelector('img')
-//         displayImage.src = imageUrl.img_url;
-//         let like = document.querySelector('button')
-//         like.textContent = `${imageUrl.likes} likes`
-
-//         like.addEventListener('click',() => {
-//             like.textContent = `${++imageUrl.likes} likes`
-//             fetch(`http://localhost:3000/ducks/${imageUrl.id}`, {
-//                 method: "PATCH",
-//                 headers: {
-//                   "content-type": "application/json",
-//                 },
-//                 body: JSON.stringify({likes: imageUrl.likes}),
-//               })
-//               .then((res) => {
-//                 if (res.status === 201) {
-//                   return res.json();
-//                 }
-//               })
-//               .then((data) => {
-//               });
-//         })
-//       })    
-
-//     });
-//   };
-
-// let newDuckForm = document.querySelector("#new-duck-form")
+const displayDrinks = (drink) => {
+    const drinkImg = document.querySelector('.detail-image');
+    const drinkName = document.querySelector('.name');
+    const drinkInfo = document.querySelector('#instructions');
+    const drinkIngredients = document.querySelector('#ingredients');
+    const drinkMeasurments = document.querySelector('#measurments');
+    const drinkListContainer = document.querySelector('#drink-grid-container');
+    const drinkList = document.createElement('div');
+    drinkImg.src = drink.strDrinkThumb;
+    drinkImg.alt = drink.strDrink;
+    drinkName.textContent = drink.strDrink;
+    drinkInfo.value = drink.strInstructions ;
+    drinkIngredients.value = drink.strIngredient1 +', ' + drink.strIngredient2 + ', ' + drink.strIngredient3 + ', ' + drink.strIngredient4
+    drinkMeasurments.value = drink.strMeasure1 +', ' + drink.strMeasure2 + ', ' + drink.strMeasure3 + ', ' + drink.strMeasure4
+    drinkList.textContent = drink.strDrink;
+    drinkList.className = "grid-item"
+    drinkListContainer.append(drinkList)
+};
 
 
-// const handleSubmit = (e) => {
 
-//     let newDuck = {
-//         name: e.target[0].value,
-//         img_url: e.target[1].value,
-//         likes: 0
-//     }
-//     fetch("http://localhost:3000/ducks", {
-//     method: "POST",
-//     headers: {
-//       "content-type": "application/json",
-//     },
-//     body: JSON.stringify(newDuck),
-//   })
-//   .then((res) => {
-//     if (res.status === 201) {
-//       return res.json();
-//     }
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   });
+const toggleButton = () =>
+document.getElementById('toggle-form').addEventListener('click', function() {
+    const form = document.getElementById('new-drink');
+    if (form.style.display === 'none') {
+      form.style.display = 'block';
+    } else {
+      form.style.display = 'none';
+}
+});
 
-  
-// };
 
-// newDuckForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     handleSubmit(e)
-//     fetch("http://localhost:3000/ducks")
-//       .then((response) => response.json())
-//       .then((data) => {
-//         // console.log(data);
-//         duckImages(data);
-//       });
-//   })
 
-    
+// const toggleButtonMenu = () =>
+// document.getElementById('toggle-drink').addEventListener('click', function() {
+//     const form = document.getElementById('drink-grid-container');
+//     if (form.style.display === 'none') {
+//       form.style.display = 'block';
+//     } else {
+//       form.style.display = 'none';
+// }
+// });
 
+// toggleButtonMenu();
+toggleButton();
+dataFetch();

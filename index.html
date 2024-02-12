@@ -1,38 +1,108 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <script defer src="src/index.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Duck Manager 2022</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drinkologist</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./index.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Drinkology</h1>
+  </header>
 
-    <h1>Duck Manager 2022</h1>
+  <p> <ul id="drink-options">
+    <li>Cocktail |</li>
+    <li>Shot |</li>
+    <li>Ordinary Drink |</li>
+    <li>Other / Unknown |</li>
+    <li>Coffee / Tea |</li>
+    <li>Beer |</li>
+    <li>Punch / Party Drink |</li>
+    <li>Shake |</li>
+    <li>Soft Drink |</li>
+    <li>Homemade Liqueur |</li>
+    <li>Cocoa |</li>
+    <li>SURPRISE ME </li>
+  </ul></p>
 
-    <div id="duck-nav">
+  <!-- <section id="drink-button">
+    <button id="toggle-drink">▶ Display Drink</button>
+  </section> -->
 
+  <div id="drink-grid-container">
+
+  </div>
+
+  <div id="letter-options-container">
+    <ul id="letter-options">
+      <li><button>#</button></li>
+      <li><button>A</button></li>
+      <li><button>B</button></li>
+      <li><button>C</button></li>
+      <li><button>D</button></li>
+      <li><button>E</button></li>
+      <li><button>F</button></li>
+      <li><button>G</button></li>
+      <li><button>H</button></li>
+      <li><button>I</button></li>
+      <li><button>J</button></li>
+      <li><button>K</button></li>
+      <li><button>L</button></li>
+      <li><button>M</button></li>
+      <li><button>N</button></li>
+      <li><button>O</button></li>
+      <li><button>P</button></li>
+      <li><button>Q</button></li>
+      <li><button>R</button></li>
+      <li><button>S</button></li>
+      <li><button>T</button></li>
+      <li><button>U</button></li>
+      <li><button>V</button></li>
+      <li><button>W</button></li>
+      <li><button>X</button></li>
+      <li><button>Y</button></li>
+      <li><button>Z</button></li>
+    </ul>
     </div>
 
-    <div id="duck-display">
-
-      <h2 id="duck-display-name">Duck Name Goes Here</h2>
-
-      <img id="duck-display-image" src="#" alt="duck image goes here">
-
-      <button id="duck-display-likes">0 likes</button>
-
+  <div id="drink-display">
+  <section id="drink-detail">
+    <h2 class="name">Insert Name Here</h2>
+    <img class="detail-image" src="./image-placeholder.jpg" alt="Placeholder Image">
+    <div class="ingredients-and-instructions">
+        <h3>Instructions:</h3>
+        <input type="text" name="instructions" id="instructions" value="Display instructions inside the box." readonly>
+        <h4>Ingredients:</h4>
+        <input type="text" name="ingredients" id="ingredients" value="Display ingredients inside the box." readonly>
+        <h5>Measurments:</h5>
+            <input type="text" name="measurments" id="measurments" value="Display measurmentsinside the box." readonly>
     </div>
+    
+  </section>
 
-    <form id="new-duck-form">
-      <label for="duck-name-input">New Duck Name:</label>
-      <input type="text" name="duck-name-input">
+</div>
+  
+  <section id="form-button">
+  <button id="toggle-form">▶ Add New Drink</button>
+</section>
 
-      <label for="duck-image-input">New Duck Image URL:</label>
-      <input type="text" name="duck-image-input">
 
-      <input type="submit" value="Create Duck">
-    </form>
-
-  </body>
+  <form id="new-drink">
+    <h4>Add New Drink:</h4>
+    <label for="drink-name">Drink Name:</label>
+    <input type="text" id="drink-name" name="drink-name" required>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category">
+    <label for="alcoholic">Alcoholic:</label>
+    <input type="text" id="alcoholic" name="alcohol">
+    <label for="glass-type">Glass Type:</label>
+    <input type="text" id="glass-type" name="glass-type">
+    <label for="instructions">Instructions:</label>
+    <textarea id="instructions" name="instructions" rows="4"></textarea>
+    <input type="submit" id="submit-button" value="Submit">
+  </form>
+</body>
 </html>
+
