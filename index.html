@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <script defer src="src/index.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Duck Manager 2022</title>
-  </head>
-  <body>
+<html>
 
-    <h1>Duck Manager 2022</h1>
+<head>
+  <meta charset="utf-8" />
+  <title>Drinkology</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script defer src="./src/index.js"></script>
+</head>
 
-    <div id="duck-nav">
+<body>
+  <header>
+    <h3>Drinkologyg</h3>
+  </header>
 
-    </div>
+  
+  <div id="drink-menu">
+  
+  </div>
 
-    <div id="duck-display">
 
-      <h2 id="duck-display-name">Duck Name Goes Here</h2>
+  <div id="drink-detail">
+    <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+    <h2 class="name">Insert Name Here</h2>
+    <h3 class="instructions">Insert instructions Here</h3>
+  </div>
 
-      <img id="duck-display-image" src="#" alt="duck image goes here">
 
-      <button id="duck-display-likes">0 likes</button>
 
-    </div>
+  <form id="drink-ramen">
+    <h4>Add New Drink</h4>
+    <label for="new-name">Name: </label>
+    <input type="text" name="name" id="new-name" />
+    <label for="new-restaurant">Restaurant: </label>
+    <input type="text" name="restaurant" id="new-restaurant" />
+    <label for="new-image">Image: </label>
+    <input type="text" name="image" id="new-image" />
+    <label for="new-rating">Rating: </label>
+    <input type="number" name="rating" id="new-rating" />
+    <label for="new-comment">Comment: </label>
+    <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
+    <input type="submit" id='submit-button' value="Create" />
+  </form>
 
-    <form id="new-duck-form">
-      <label for="duck-name-input">New Duck Name:</label>
-      <input type="text" name="duck-name-input">
+</body>
 
-      <label for="duck-image-input">New Duck Image URL:</label>
-      <input type="text" name="duck-image-input">
-
-      <input type="submit" value="Create Duck">
-    </form>
-
-  </body>
 </html>
+
