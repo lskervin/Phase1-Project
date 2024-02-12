@@ -188,3 +188,14 @@ bottom: -10px;
     text-align: center;
     box-sizing: border-box; /* Include padding and border in the width */
 }
+/* h3 {
+    position: relative;
+    right: 620px;
+    bottom: -27px;
+}
+
+#ingredients-and-instructions{
+    position: relative;
+    left: 100px;
+    width: 50%;
+} */
