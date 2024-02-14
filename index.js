@@ -1,35 +1,3 @@
-// function dataFetch() {
-//     fetch('http://localhost:3000/drinks')
-//       .then((response) => response.json())
-//       .then((response) => { 
-//         Array.from(response).forEach((drink)=> {
-//         filterCategories(drink);
-//         displayDrinks(drink);
-//       });
-// });
-// };
-
-// const displayDrinks = (drink) => {
-//     const drinkImg = document.querySelector('.detail-image');
-//     const drinkName = document.querySelector('.name');
-//     const drinkInfo = document.querySelector('#instructions');
-//     const drinkIngredients = document.querySelector('#ingredients');
-//     const drinkMeasurments = document.querySelector('#measurments');
-//     const drinkListContainer = document.querySelector('#drink-grid-container');
-//     const drinkList = document.createElement('div');
-//     drinkImg.src = drink.strDrinkThumb;
-//     drinkImg.alt = drink.strDrink;
-//     drinkName.textContent = drink.strDrink;
-//     drinkInfo.value = drink.strInstructions ;
-//     drinkIngredients.value = drink.strIngredient1 +', ' + drink.strIngredient2 + ', ' + drink.strIngredient3 + ', ' + drink.strIngredient4
-//     drinkMeasurments.value = drink.strMeasure1 +', ' + drink.strMeasure2 + ', ' + drink.strMeasure3 + ', ' + drink.strMeasure4
-//     drinkList.textContent = drink.strDrink;
-//     drinkList.className = "grid-item"
-//     drinkListContainer.append(drinkList)
-
-
-
-
 const dataFetch = () => {
     fetch('http://localhost:3000/drinks')
       .then((response) => response.json())
@@ -88,11 +56,8 @@ const displayDrinks = (drink) => {
     drinkMeasurments.value = `${drink.strMeasure1}, ${drink.strMeasure2}, ${drink.strMeasure3}, ${drink.strMeasure4}`;
     drinkNameDisplay.textContent = drink.strDrink;
     
-    // drinkList.appendChild(drinkImg);
+
     drinkList.appendChild(drinkName);
-    // drinkList.appendChild(drinkInfo);
-    // drinkList.appendChild(drinkIngredients);
-    // drinkList.appendChild(drinkMeasurments);
     
     drinkList.className = "grid-item";
     drinkList.dataset.strCategory = drink.strCategory;
@@ -140,12 +105,29 @@ const filterLetters = () => {
     });
 };
 
+const h1 = document.querySelector('h1');
+
+// Add event listener for mouseover
+h1.addEventListener('mouseover', () => {
+    // Change background color when mouse hovers over the box
+    h1.style.backgroundColor = '#28282B';
+});
+
+// Add event listener for mouseout (optional)
+h1.addEventListener('mouseout', ()=> {
+    // Restore original background color when mouse leaves the box
+    h1.style.backgroundColor = '';
+});
+
 
 const toggleButton = () =>
   document.getElementById('toggle-form').addEventListener('click', function() {
     const form = document.getElementById('new-drink');
     form.style.display = form.style.display === 'none' ? 'block' : 'none';
   });
+
+
+
 
 dataFetch();
 filterLetters();
