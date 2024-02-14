@@ -127,10 +127,6 @@ const toggleButton = () =>
   });
 
 
-
-
-dataFetch();
-
 const addSubmitListener = (event) => {
   event.preventDefault();
   let newDrink = {
@@ -164,8 +160,7 @@ const addSubmitListener = (event) => {
       return response.json()
     }
   })
-  .then((data) => {
-const drinkFormName = document.getElementById('new-drink');  
+  .then((data) => {  
 const drinkNameInput = document.getElementById('drink-name');
 const categoryInput = document.getElementById('category');
 const glassInput = document.getElementById('glass-type')
@@ -205,8 +200,10 @@ form.addEventListener('submit', (event) =>{
 
 
     // Send the form data to the server
-  })
-  
+});
+
+
+dataFetch();
 filterLetters();
 filterCategories();
 toggleButton();

@@ -38,7 +38,7 @@ header {
     width: 100%;
     color:white;
     background: linear-gradient(to right, #2989d8);
-    font-size: 3rem;
+    font-size: .5rem;
     font-family: 'Great Vibes', cursive;
     font-weight:bolder;
     text-shadow: 2px 2px 4px rgba(12, 11, 11, 0.5);
@@ -89,7 +89,7 @@ header {
 
 #toggle-form {
     font-size: 0.8rem;
-    color: #0c131a;
+    color: #f9fbfd;
     margin: 5rem 0;
     display: flex;
     flex-direction: column;
@@ -99,12 +99,12 @@ header {
     position: relative;
     z-index: 9999;
     bottom: -275px;
-    right: 688px; /* Adjust as needed */
+    right: 685px; /* Adjust as needed */
 }
 
 #toggle-form button {
     background-color: transparent;
-    color: #10282e;
+    color: #f4f5f6;
     padding: 5px 10px;
     border: none;
 }
@@ -189,8 +189,9 @@ form h4 {
     margin-right: 0;
 }
 
-#drink-options li {
-    color: white; /* Text color */
+#drink-options li button {
+    color: white;
+    background-color: #181813;
 }
 
 #drink-display {
@@ -227,12 +228,18 @@ bottom: -10px;
     box-shadow: 10px 5px 5px rgb(19, 19, 19);
 
 }
+.ingredients-and-instructions{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #new-drink{
     background: transparent;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
    
 
 }
@@ -279,6 +286,8 @@ animation: animate 10s linear infinite;
             padding-left: 30px;
             border-radius: 20px;
             background-color: #260909;
+            display: flex;
+            flex-wrap: wrap;
           }
           #ingredients{
             padding-top: 30px;
