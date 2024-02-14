@@ -18,22 +18,45 @@ function dataFetch() {
 };
 
 const displayDrinks = (drink) => {
-    const drinkImg = document.querySelector('.detail-image');
-    const drinkName = document.querySelector('.name');
-    const drinkInfo = document.querySelector('#instructions');
-    const drinkIngredients = document.querySelector('#ingredients');
-    const drinkMeasurments = document.querySelector('#measurments');
-    const drinkListContainer = document.querySelector('#drink-grid-container');
-    const drinkList = document.createElement('div');
-    drinkImg.src = drink.strDrinkThumb;
-    drinkImg.alt = drink.strDrink;
-    drinkName.textContent = drink.strDrink;
-    drinkInfo.value = drink.strInstructions ;
-    drinkIngredients.value = drink.strIngredient1 +', ' + drink.strIngredient2 + ', ' + drink.strIngredient3 + ', ' + drink.strIngredient4
-    drinkMeasurments.value = drink.strMeasure1 +', ' + drink.strMeasure2 + ', ' + drink.strMeasure3 + ', ' + drink.strMeasure4
-    drinkList.textContent = drink.strDrink;
-    drinkList.className = "grid-item"
-    drinkListContainer.append(drinkList)
+  const ingredientsInstructionsDiv = document.querySelector(".ingredients-and-instructions")
+  const drinkImg = document.querySelector("#drink-display img");
+  const drinkName = document.createElement('h3');
+  const drinkInfo = ingredientsInstructionsDiv.querySelector("#instructions");
+  const drinkIngredients = ingredientsInstructionsDiv.querySelector("#ingredients");
+  const drinkMeasurments = ingredientsInstructionsDiv.querySelector("#measurments");
+  const drinkListContainer = document.querySelector('#drink-grid-container');
+  const drinkList = document.createElement('div');
+  const drinkNameDisplay = document.querySelector(".name");
+  
+  
+  drinkImg.src = drink.strDrinkThumb;
+  drinkImg.alt = drink.strDrink;
+  drinkName.textContent = drink.strDrink;
+  drinkInfo.value = drink.strInstructions;
+  drinkIngredients.value = `${drink.strIngredient1}, ${drink.strIngredient2}, ${drink.strIngredient3}, ${drink.strIngredient4}`;
+  drinkMeasurments.value = `${drink.strMeasure1}, ${drink.strMeasure2}, ${drink.strMeasure3}, ${drink.strMeasure4}`;
+  drinkNameDisplay.textContent = drink.strDrink;
+  
+
+  drinkList.appendChild(drinkName);
+
+  
+  drinkList.className = "grid-item";
+  drinkList.dataset.strCategory = drink.strCategory;
+  
+  drinkListContainer.appendChild(drinkList);
+
+  drinkList.addEventListener('click', () => {
+      const drinkName = document.querySelector('.name');
+      drinkName.textContent = drink.strDrink;
+      drinkImg.src = drink.strDrinkThumb;
+      drinkImg.alt = drink.strDrink;
+      drinkInfo.value = drink.strInstructions;
+      drinkIngredients.value = `${drink.strIngredient1}, ${drink.strIngredient2}, ${drink.strIngredient3}, ${drink.strIngredient4}`;
+      drinkMeasurments.value = `${drink.strMeasure1}, ${drink.strMeasure2}, ${drink.strMeasure3}, ${drink.strMeasure4}`;
+
+  
+  });
 };
 
 
