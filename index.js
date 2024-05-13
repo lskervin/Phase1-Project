@@ -1,7 +1,8 @@
 const dataFetch = () => {
-    fetch('http://localhost:3000/drinks')
+    fetch('https://lskervin.github.io/Phase1-Project/db.json')
       .then((response) => response.json())
-      .then((drinks) => { 
+      .then((data) => { 
+        const drinks = data.drinks;
         drinks.forEach((drink)=> {
           displayDrinks(drink);
         });
