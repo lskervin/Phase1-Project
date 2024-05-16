@@ -218,7 +218,7 @@ h1 {
     }
     100% {
         color: #fff;
-        box-shadow: 0 0 0 10px #03bcf4, 0 0 40px #0e3742, 0 0 60px #03bcf4, 0 0 80px #03bcf4, 0 0 180px #03bcf4, 0 0 80px #03bcf4;
+        box-shadow: 0 0 0 10px #cc0000, 0 0 40px ##420e0e, 0 0 60px #cc0000, 0 0 80px #cc0000, 0 0 80px #cc0000, 0 0 80px #cc0000;
     }
 }
 
