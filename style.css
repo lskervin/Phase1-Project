@@ -51,6 +51,34 @@ header {
     background-color: #171210;
     border-radius: 10px;
 }
+#letter-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   ;
+}
+
+#letter-options li {
+
+    display: inline-block;
+}
+
+#letter-options li button {
+    background-color: transparent;
+    color: rgb(235, 241, 246);
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#letter-options li:last-child button {
+    margin-right: 0;
+}
+
+#letter-options li button:hover {
+    background-color: rgba(53, 36, 36, 0.1); /* Hover color */
+}
 
 /* Form styles */
 /* Add a class to the form for better targeting */
