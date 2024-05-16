@@ -1,5 +1,5 @@
 const dataFetch = () => {
-    fetch('https://lskervin.github.io/Phase1-Project/db.json')
+    fetch('https://lskervin.github.io/drinkologist/db.json')
       .then((response) => response.json())
       .then((data) => { 
         const drinks = data.drinks;
