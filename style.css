@@ -1,51 +1,45 @@
-* Global styles */
-
-
-#one{
+/* Global styles */
+#one {
     border-radius: 10px;
-    background-color:#410707;
-    font-size:1.3em;
-    padding:9px 10%;
+    background-color: #410707;
+    font-size: 1.3em;
+    padding: 9px 10%;
 }
+
 * {
     margin: 0;
-    /*font-family: Arial, Helvetica, sans-serif;*/
     box-sizing: border-box;
     color: #fffefe;
-
 }
-  
+
 /* Body styles */
 body {
-    background-image:url(bastos.jpeg);
+    background-image: url(bastos.jpeg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     padding: 1rem;
     text-align: center;
-    background-color:#d2e2e6;
+    background-color: #d2e2e6;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-
 }
 
 /* Header styles */
 header {
     padding: 0.26rem;
     width: 100%;
-    color:white;
+    color: white;
     background: linear-gradient(to right, #2989d8);
     font-size: .75rem;
     font-family: 'Great Vibes', cursive;
-    font-weight:bolder;
+    font-weight: bolder;
     text-shadow: 2px 2px 4px rgba(12, 11, 11, 0.5);
-   
 }
 
-/* letter filters */
+/* Letter filters */
 #letter-options-container {
     color: white;
     width: 100%;
@@ -53,64 +47,9 @@ header {
     bottom: 0px;
     left: 0;
     right: 0;
-    z-index: 9998; /* Lower z-index to place it behind #letter-options */
-    background-color:#171210; /* Black background */
-    border-radius:10px;
-}
-
-#letter-options {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-   ;
-}
-
-#letter-options li {
-
-    display: inline-block;
-}
-
-#letter-options li button {
-    background-color: transparent;
-    color: rgb(235, 241, 246);
-    border: none;
-    padding: 5px 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-#letter-options li:last-child button {
-    margin-right: 0;
-}
-
-#letter-options li button:hover {
-    background-color: rgba(53, 36, 36, 0.1); /* Hover color */
-}
-
-#toggle-form {
-    font-size: 0.8rem;
-    color: #f9fbfd;
-    margin: 5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #07252d;
-    background-color: black;
-    position: relative;
-    z-index: 9999;
-    bottom: -275px;
-    right: 685px; /* Adjust as needed */
-}
-
-#toggle-form button {
-    background-color: transparent;
-    color: #f4f5f6;
-    padding: 5px 10px;
-    border: none;
-}
-
-#toggle-form button:hover {
-    background-color: #4b421e(255, 255, 255, 0.1); /* Hover color */
+    z-index: 9998;
+    background-color: #171210;
+    border-radius: 10px;
 }
 
 /* Form styles */
@@ -120,21 +59,17 @@ header {
     bottom: -110px;
     left: 0;
     width: 100%;
-    background-color: #87975c; /* Match background color of body */   box-sizing: border-box;
-    
-    
+    background-color: #87975c;
+    box-sizing: border-box;
 }
 
 form {
-  
     font-size: 0.75rem;
     margin: 5rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  
-
 }
 
 input,
@@ -145,7 +80,7 @@ textarea {
     padding: 0.5rem;
     margin: 0.25rem 0;
     width: 100%;
-    background-color:#02212a;
+    background-color: #02212a;
 }
 
 input[type="submit"] {
@@ -158,7 +93,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:active {
-    background-color:#07252d;
+    background-color: #07252d;
 }
 
 form h4 {
@@ -167,22 +102,24 @@ form h4 {
     margin: 0.5rem 0;
     left: 0;
     color: white;
-    background-color:black;
+    background-color: black;
 }
+
+/* Drink options */
 #drink-options {
-    color:#0c131a;
+    color: #0c131a;
     border-radius: 10px;
     border: none;
     width: 100%;
     list-style: none;
     padding: 10px;
     margin: 0;
-    background-color:#181813;
-    display: flex; /* Make it a flex container */
+    background-color: #181813;
+    display: flex;
 }
 
 #drink-options li {
-    margin-right: 10px; /* Add some spacing between items */
+    margin-right: 10px;
 }
 
 #drink-options li:last-child {
@@ -194,182 +131,117 @@ form h4 {
     background-color: #181813;
 }
 
+/* Drink display */
 #drink-display {
-position: relative;
-bottom: -10px;
+    position: relative;
+    bottom: -10px;
 }
 
+/* Drink grid container */
 #drink-grid-container {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     padding: 10px;
     border: 1px solid #ccc;
-    width: 100%; /* Full width of the page */
+    width: 100%;
     max-height: 200px;
     overflow-y: auto;
-    border: none;
 }
 
 #drink-grid-container .grid-item {
     cursor: pointer;
     color: white;
-    flex-basis: calc(16.666% - 50px); /* Adjust the width of each item */
+    flex-basis: calc(16.666% - 50px);
     border-radius: 25px;
     background-color: #601a1a;
     border: 1px solid #070808;
     padding: 10px;
     text-align: center;
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box;
 }
 
-#drink-grid-container .grid-item:hover{
-    opacity:0.8;
+#drink-grid-container .grid-item:hover {
+    opacity: 0.8;
     box-shadow: 10px 5px 5px rgb(19, 19, 19);
-
-}
-.ingredients-and-instructions{
-    display: flex;
-    flex-wrap:wrap;
-}
-.ingredients-and-instructions #instructions{
-    display: flex;
-    flex-wrap:wrap;
 }
 
-#new-drink{
-    background: transparent;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+/* Ingredients and instructions */
+.ingredients-and-instructions {
     display: flex;
     flex-wrap: wrap;
-   
-
 }
 
-.detail-image{
-    border-radius: 20px;
+.ingredients-and-instructions #instructions {
+    display: flex;
+    flex-wrap: wrap;
 }
-#submit-button{
-    color:rgb(255, 255, 255);
-    background-color: rgb(3, 3, 3);
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 10px 10px 10px 10px;
- 
+
+/* Animation */
+h1 {
+    position: relative;
+    color: #1a3137;
+    animation: animate 10s linear infinite;
 }
-h1{
-    position:relative;
-    color:#1a3137;
-animation: animate 10s linear infinite;
-}
-@keyframes animate{
-    0%
-    {
-        color:#0e3742;
+
+@keyframes animate {
+    0% {
+        color: #0e3742;
     }
-    100%{
+    100% {
         color: #fff;
-        box-shadow: 0 0 0 10px #03bcf4,
-        0 0 40px #0e3742,
-        0 0 60px #03bcf4,
-        0 0 80px #03bcf4,
-        0 0 180px #03bcf4,
-        0 0 80px #03bcf4,
+        box-shadow: 0 0 0 10px #03bcf4, 0 0 40px #0e3742, 0 0 60px #03bcf4, 0 0 80px #03bcf4, 0 0 180px #03bcf4, 0 0 80px #03bcf4;
     }
 }
-   
-    
-    .white-text{
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        color: white;
-        }
-        #instructions {
-            padding-top: 30px;
-            padding-right: 30px;
-            padding-bottom: 30px;
-            padding-left: 30px;
-            border-radius: 20px;
-            background-color: #601a1a;
-            display: flex;
-            flex-wrap: wrap;
-          }
-          #ingredients{
-            padding-top: 30px;
-            padding-right: 30px;
-            padding-bottom: 30px;
-            padding-left: 30px;
-            border-radius: 20px;
-            background-color: #601a1a;
-          }
-          #measurments{
-            padding-top: 30px;
-            padding-right: 30px;
-            padding-bottom: 30px;
-            padding-left: 30px;
-            border-radius: 20px;
-            background-color: #601a1a;
-         }
-         #drink-name{
-          background-color:#601a1a;
-          border-radius: 10em;
-          display:flex;
-          
-         }
-         #category{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #alcoholic{
-            background-color:#601a1a; 
-            border-radius: 10em 
-         }
-         #glass-type{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #new-image{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #ingredient-One{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #ingredient-two{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #ingredient-three{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #ingredient-four{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #Mesurment-One{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #Mesurment-One{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #Mesurment-two{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #mesurment-three{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
-         #mesurment-four{
-            background-color:#601a1a;
-            border-radius: 10em
-         }
 
-
+/* Mobile specific styles */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Adjustments for smaller screens */
+    #one {
+        padding: 9px 5%;
+        font-size: 1.1em;
+    }
+    header {
+        padding: 0.13rem;
+    }
+    #toggle-form {
+        font-size: 0.65rem;
+        bottom: -240px;
+        right: 0;
+    }
+    form {
+        margin: 3rem 0;
+    }
+    input,
+    textarea {
+        font-size: 0.9rem;
+    }
+    form h4 {
+        padding: 0.15rem;
+        margin: 0.3rem 0;
+    }
+    #drink-grid-container .grid-item {
+        flex-basis: calc(33.333% - 20px);
+    }
+    #instructions,
+    #ingredients,
+    #measurments {
+        padding: 15px;
+    }
+    #drink-name,
+    #category,
+    #alcoholic,
+    #glass-type,
+    #new-image,
+    #ingredient-One,
+    #ingredient-two,
+    #ingredient-three,
+    #ingredient-four,
+    #Mesurment-One,
+    #Mesurment-One,
+    #Mesurment-two,
+    #mesurment-three,
+    #mesurment-four {
+        border-radius: 5px;
+    }
+}
